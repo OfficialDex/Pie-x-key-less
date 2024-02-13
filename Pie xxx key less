@@ -1,0 +1,422 @@
+loadstring(game:HttpGet("https://pastebin.com/raw/7TXkCuXQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OfficialDex/ldk/main/1dk"))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://232127604"
+Sound:Play()
+local Window = Fluent:CreateWindow({
+    Title = "Pie x",
+    SubTitle = "Blade ball",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+
+--Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
+local Tabs = {
+    Settings = Window:AddTab({ Title = "Player setting", Icon = "user-cog" }),
+    Main = Window:AddTab({ Title = "Combat", Icon = "swords" }),
+  Music = Window:AddTab({ Title = "Music", Icon = "music" }),
+    Info = Window:AddTab({ Title = "Information", Icon = "info" })
+}
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Thanks for using Pie x",
+        Content = "Created by Exploit x",
+        SubContent = "", -- Optional
+        Duration = 10-- Set to nil to make the notification not disappear
+    })
+
+Tabs.Main:AddButton({
+        Title = "Auto parry",
+        Description = "High ping supported",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Parry/main/auto"))()
+end
+    })
+Tabs.Main:AddButton({
+        Title = "2nd Auto parry",
+        Description = "High ping supported",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Do-it/main/Stop"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Auto-Spam-Parry/main/Bladeballnew"))()
+end
+    })
+    
+    Tabs.Main:AddButton({
+        Title = "Manual spam",
+        Description = "High ping supported",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Auto-spam/main/Manual-spam"))()
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Auto spam",
+        Description = "High ping supported",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kyleniko/Auto-Spam-Detect-V5/main/NOVA%20X"))()
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "View parts",
+        Description = "•_•",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sirapobsriumang/Do-itbro/main/Hehe"))()
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Radar+Green circle parry",
+        Description = "Combo features",
+        Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/k00pz/Fsploitrady/main/Hi"))()
+  print("hi")
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Get any ability",
+        Description = "Use this to get any ability",
+        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/ZhMpvMCb"))()
+  print("Fluxus")
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Tracers",
+        Description = "Use this to trace players",
+        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/vWxn47BC"))()
+  print("Hi")
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Arrow ESP",
+        Description = "Use this to view player directions",
+        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/C7Gafsbr"))()
+  print("Hellow")
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Name ESP",
+        Description = "Use this to view player names",
+        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/SjyEEE92"))()
+  print("xd")
+end
+    })
+    Tabs.Main:AddButton({
+        Title = "Old Manual spam",
+        Description = "Its the pie x v0.2's Manual spam",
+        Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/E520gRbT"))()
+  print("Fluxus")
+end
+    })
+    local Slider = Tabs.Settings:AddSlider("Slider", {
+        Title = "Walk speed",
+        Description = "Use this to change your walk speed",
+        Default = 21,
+        Min = 0,
+        Max = 500,
+        Rounding = 1,
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+print("Hi")
+        end
+    })
+  local Slider = Tabs.Settings:AddSlider("Slider", {
+        Title = "Jump power",
+        Description = "Use this to change your jump power",
+        Default = 40,
+        Min = 0,
+        Max = 500,
+        Rounding = 1,
+        Callback = function(Value)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+print("Hi")
+        end
+    })
+  local Slider = Tabs.Settings:AddSlider("Slider", {
+        Title = "FOV",
+        Description = "Use this to change your FOV",
+        Default = 70,
+        Min = 0,
+        Max = 500,
+        Rounding = 1,
+        Callback = function(Value)
+            local FovNumber = Value
+local Camera = workspace.CurrentCamera
+Camera.FieldOfView = FovNumber
+print("Hi")
+        end
+    })
+  local Slider = Tabs.Settings:AddSlider("Slider", {
+        Title = "Gravity",
+        Description = "Use this to change your Gravity",
+        Default = 197,
+        Min = 0,
+        Max = 500,
+        Rounding = 1,
+        Callback = function(Value)
+            workspace.Gravity = Value
+print("Hi")
+        end
+    })
+  
+  Tabs.Settings:AddButton({
+        Title = "Infinite jump",
+        Description = "Use this to get Infinite jump",
+        Callback = function()
+          local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+    if InfiniteJumpEnabled then
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+    end
+end)
+          print("Hydrogen")
+          end
+    })
+  Tabs.Settings:AddButton({
+        Title = "Noclip",
+        Description = "Use this to Walk through walls",
+        Callback = function()
+          local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip()
+print("Hi")
+          end
+    })
+  Tabs.Settings:AddButton({
+        Title = "FPS boost",
+        Description = "Use this to boost your fps",
+        Callback = function()
+          loadstring(game:HttpGet("https://pastebin.com/raw/PkMN7QKQ"))()
+  print("Fluxus")
+        end
+  })
+  local Input = Tabs.Settings:AddInput("Input your fps here", {
+        Title = "Custom FPS (Beta)",
+        Default = "99",
+        Placeholder = "Input your fps here",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+        local fps = Value
+
+if setfpscap then
+    setfpscap(fps)
+end
+            print("Input changed:", Value)
+        end
+    })
+  Tabs.Settings:AddButton({
+        Title = "Fly",
+        Description = "Use this to Fly",
+        Callback = function()
+          loadstring(game:HttpGet('https://raw.githubusercontent.com/k00pz/Flying/main/Fly-gui'))()
+        end
+  })
+  Tabs.Settings:AddButton({
+        Title = "TP tool",
+        Description = "Use this to TP anywhere",
+        Callback = function()
+          mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "TP Toolz"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+        end
+  })
+  Tabs.Settings:AddButton({
+        Title = "TP to players",
+        Description = "Use this to Teleport to players",
+        Callback = function()
+            loadstring(game:HttpGet("https://gist.githubusercontent.com/DagerFild/b4776075a0d26ef04394133ee6bd2081/raw/0ed51ac94057d2d9a9f00e1b037b9011c76ca54a/tpGUI", true))()
+        end
+  })
+  Tabs.Settings:AddButton({
+        Title = "Rejoin",
+        Description = "Use this to Rejoin the server",
+        Callback = function()
+          local ts = game:GetService("TeleportService")
+				local p = game:GetService("Players").LocalPlayer
+				ts:Teleport(game.PlaceId, p)
+    print("Clicked!")
+        end
+  })
+  Tabs.Info:AddParagraph({
+        Title = "Created By",
+        Content = "Blxze,FSploit,Gear v4 and vien"
+    })
+    Tabs.Info:AddParagraph({
+        Title = "Version",
+        Content = "0.3(latest version)"
+    })
+    Tabs.Info:AddParagraph({
+        Title = "What is pie icon for?",
+        Content = "Pie icon is use to hide/show the hub."
+    })
+  Tabs.Info:AddButton({
+        Title = "Join us in discord",
+        Description = "We have created roblox alt account generator!",
+        Callback = function()
+setclipboard("https://discord.gg/ah525r8NP3")
+        end
+  })
+     local Input = Tabs.Music:AddInput("In", {
+        Title = "Music",
+        Default = "",
+        Placeholder = "Put your music ID here",
+        Numeric = false, -- Only allows numbers
+        Finished = false, -- Only calls callback when you press enter
+        Callback = function(Value)
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://"..Value
+Sound:Play()
+            print("Input changed:", Value)
+        end
+    })
+Tabs.Music:AddButton({
+        Title = "Its Raining tacos",
+        Description = "Tacos!",
+        Callback = function()
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://142376088"
+Sound:Play()
+        end
+})
+  Tabs.Music:AddButton({
+        Title = "Freak",
+        Description = "I m just a freak!",
+        Callback = function()
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://6703926669"
+Sound:Play()
+        end
+})
+  Tabs.Music:AddButton({
+        Title = "Rave crab",
+        Description = "🦀",
+        Callback = function()
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://5410086218"
+Sound:Play()
+        end
+})
+  Tabs.Music:AddButton({
+        Title = "Brookenly blood pop",
+        Description = "Blood",
+        Callback = function()
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://6783714255"
+Sound:Play()
+        end
+})
+  Tabs.Music:AddButton({
+        Title = "Stronger",
+        Description = "💪",
+        Callback = function()
+          local Sound = Instance.new("Sound",game:GetService("SoundService"))
+Sound.SoundId = "rbxassetid://136209425"
+Sound:Play()
+        end
+})
+   
+    -- OnClick is only fired when you press the keybind and the mode is Toggle
+    -- Otherwise, you will have to use Keybind:GetState()
+    Keybind:OnClick(function()
+        print("Keybind clicked:", Keybind:GetState())
+    end)
+
+    Keybind:OnChanged(function()
+        print("Keybind changed:", Keybind.Value)
+    end)
+
+    task.spawn(function()
+        while true do
+            wait(1)
+
+            -- example for checking if a keybind is being pressed
+            local state = Keybind:GetState()
+            if state then
+                print("Keybind is being held down")
+            end
+
+            if Fluent.Unloaded then break end
+        end
+    end)
+
+    Keybind:SetValue("Pie", "Toggle") -- Sets keybind to MB2, mode to Hold
+
+end
+
+
+-- Addons:
+-- SaveManager (Allows you to have a configuration system)
+-- InterfaceManager (Allows you to have a interface managment system)
+
+-- Hand the library over to our managers
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("FluentScriptHub")
+SaveManager:SetFolder("FluentScriptHub/specific-game")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "Pie x has been successfully loaded!",
+    Content = "Enjoy xd",
+    Duration = 9
+})
+
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
